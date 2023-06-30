@@ -1,7 +1,7 @@
 const authorizer = require('./authorizer')
-const checkUrl = require('./checkUrl')
+const fieldsValidator = require("./fieldsValidator")
 
 module.exports = {
     authorizer,
-    checkUrl,
+    fieldsValidator
 }
