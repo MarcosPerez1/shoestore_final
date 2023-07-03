@@ -26,7 +26,8 @@ CREATE TABLE IF NOT EXISTS products (
     model TEXT NOT NULL,
     size TEXT NOT NULL,
     images TEXT NOT NULL,
-    price NUMERIC(10,2) NOT NULL
+    price NUMERIC(10,2) NOT NULL,
+    quantity NUMERIC NOT NULL
 );
 
 -- CREACION DE LA TABLA FAVOURIES
