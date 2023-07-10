@@ -1,4 +1,4 @@
-module.exports={
-    allInfo:require("./getAll"),
-    getShoe:require("./getShoe")
+module.exports = {
+    allInfo: require("./getAll"),
+    getShoe: require("./getShoe")
 }

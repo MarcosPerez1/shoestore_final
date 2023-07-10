@@ -1,5 +1,5 @@
 const queries = require("../../models/shoes")
-const errors=require("../../misc/errors")
+const errors = require("../../misc/errors")
 
 module.exports = (db) => async (req, res, next) => {
     const { model } = req.query

@@ -1,5 +1,5 @@
 const queries = require("../../models/purchases")
-const errors=require("../../misc/errors")
+const errors = require("../../misc/errors")
 
 module.exports = (db) => async (req, res, next) => {
     const dbResponse = await queries.getAllInfoPurchases(await db)()
