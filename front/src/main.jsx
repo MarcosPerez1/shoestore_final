@@ -1,10 +1,33 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Switch, Redirect } from "wouter";
+import "./main.css";
+import Styled from "./styles";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+import Route from "./components/Route";
+import Provider from "./context/Provider";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import NavBar from "./components/Navbar";
+
+const Main = () => {
+  return (
+    <Provider>
+      <Styled.Wrapper>
+        <NavBar />
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Redirect to="/login" />
+
+        </Switch>
+      </Styled.Wrapper>
+    </Provider>
+  );
+};
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+    <Main />
+  </React.StrictMode>
+);
