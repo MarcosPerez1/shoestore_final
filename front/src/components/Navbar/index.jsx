@@ -6,18 +6,23 @@ const CustomLink = ({href, children}) =>{
 
     return(
         <Link {...{href}}>
-            <Styled.Anchor {...{href, isActive}}>{children}</Styled.Anchor>
+            <Styled.Anchor {...{href, isActive}}>
+                {children}
+              
+                </Styled.Anchor>
         </Link>
     )
 }
 
 const NavBar = ()=>{
     return(
+       
         <Styled.Nav>
             <CustomLink href="/register">Register</CustomLink>
             <CustomLink href="/login">Login</CustomLink>
-            
+            <CustomLink href="/products">Products</CustomLink>
         </Styled.Nav>
+     
     )
 }
 

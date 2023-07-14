@@ -35,7 +35,7 @@ const Login = () => {
       </Form>
 
       <Footer>
-        <Link to="/register">Don't have account yet? Create one!</Link>
+        <Link to="/register">Si aún no estas registrado, pincha aqui!</Link>
       </Footer>
     </Styled.Page>
   );

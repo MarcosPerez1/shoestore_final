@@ -8,6 +8,7 @@ import Route from "./components/Route";
 import Provider from "./context/Provider";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Products from "./pages/Products";
 import NavBar from "./components/Navbar";
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/products" component={Products} />
           <Redirect to="/login" />
 
         </Switch>

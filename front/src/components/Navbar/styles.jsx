@@ -1,21 +1,31 @@
 import { styled } from "styled-components";
 
 const Nav = styled.nav`
+
   display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
-  font-size: 1.5rem;
-  margin: 0 50px;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  font-size: 1.2rem;
+  margin: 0;
+  height: 50px;
+  background-color: black;
+  text-align: center;
+
+
 `;
 
 const Anchor = styled.a`
   ${({ isActive }) => `
-    color: ${isActive ? "#F7A072" : "#00A7E1"};
+    color: ${isActive ? "#EBEBEB" : "#00A7E1"};
     text-decoration: ${!isActive && "none"};
+    font-size: ${isActive ? "1.6rem" : "1.3rem"};
   `}
 `;
 
+
 export default {
   Nav,
-  Anchor
+  Anchor,
+ 
 };

@@ -5,7 +5,14 @@ const Button = styled.button`
   height: 45px;
   font-size: 21px;
   border-radius: 10px;
-  background-color: ghostwhite;
+  background-color: #007bff;
+  color: white; 
+  border: none; 
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0056b3; 
+  }
 `;
 
 export default {

@@ -16,9 +16,9 @@ const Register = () => {
 
   return (
     <Styled.Page>
-      <Title>Register</Title>
+      <Title>Regístrate!</Title>
 
-      <Form onSubmit={register} button="Create">
+      <Form onSubmit={register} button="Registrame!">
         <Input
           name="email"
           label={true}
@@ -41,7 +41,7 @@ const Register = () => {
       </Form>
 
       <Footer>
-        <Link to="/login">Already registered? Log in, then!</Link>
+        <Link to="/login">¿Listo para explorar de nuevo? ¡Bienvenido de vuelta a tu cuenta!</Link>
       </Footer>
     </Styled.Page>
   );
