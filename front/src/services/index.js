@@ -3,6 +3,7 @@ import axios from "axios";
 import { register, login, logout } from "./auth";
 import { basic } from "./user"
 import { products } from "./products";
+import { favourites } from "./favouritesClient"
 
 
 const client = axios.create({
@@ -25,8 +26,12 @@ const info = {
   products: products(client)
 }
 
+const favInfo = {
+  favourites: favourites(client)
+}
 export {
   auth,
   user,
-  info
+  info,
+  favInfo
 }

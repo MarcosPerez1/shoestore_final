@@ -1,8 +1,11 @@
-const { getAllFavs, getFavsUser, newFavourite, deleteFav } = require("./queries")
+const { getFavsUser, newFavourite, deleteFav, allFavourites } = require("./queries")
 
-const getFavs = (db) = async () => {
+const getFavs = (db) => async () => {
+
     try {
-        const response = await db.query(getAllFavs())
+        console.log(db)
+        const response = await db.query(allFavourites())
+        
         return {
             ok: true,
             response: response.rows
@@ -16,9 +19,10 @@ const getFavs = (db) = async () => {
     }
 }
 
-const FavUser = (db) = async (name) => {
+const FavUser = (db) => async (email) => {
     try {
-        const response = await db.query(getFavsUser(name))
+        const response = await db.query(getFavsUser(email))
+        console.log(response, 'respondeeee')
         return {
             ok: true,
             response: response.rows
@@ -66,8 +70,8 @@ const eraseFav = (db) => async (shoeId, userId) => {
     }
 }
 module.exports = {
-    getFavs,
     FavUser,
     addFavourite,
-    eraseFav
+    eraseFav,
+    getFavs
 }

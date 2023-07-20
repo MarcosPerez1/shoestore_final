@@ -9,6 +9,7 @@ import Provider from "./context/Provider";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
+import userPage from "./pages/UserPage"
 import NavBar from "./components/Navbar";
 
 const Main = () => {
@@ -20,6 +21,7 @@ const Main = () => {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/products" component={Products} />
+          <Route path="/" guarded={true}  component={userPage} />
           <Redirect to="/login" />
 
         </Switch>

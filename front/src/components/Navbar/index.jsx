@@ -21,6 +21,7 @@ const NavBar = ()=>{
             <CustomLink href="/register">Register</CustomLink>
             <CustomLink href="/login">Login</CustomLink>
             <CustomLink href="/products">Products</CustomLink>
+            <CustomLink href="/userPage">User</CustomLink>
         </Styled.Nav>
      
     )

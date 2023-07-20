@@ -2,8 +2,9 @@ const { sql } = require("slonik")
 
 
 const getAllShoes = () => sql.unsafe`
-SELECT *
+SELECT id, brand, model, size, images, price, quantity
 FROM products
+
 `
 const getShoeName = (model) => sql.unsafe`
 SELECT model,brand,size,images,price

@@ -4,7 +4,7 @@ import { info } from "../services"
 export const useProducts = () => {
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [error, setError] = useState(null)
+
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -13,7 +13,7 @@ export const useProducts = () => {
         setData(response.data)
         setIsLoading(false)
       } catch (error) {
-        setError(error)
+
         setIsLoading(false)
       }
     }
@@ -21,5 +21,5 @@ export const useProducts = () => {
     fetchProducts()
   }, [])
 
-  return { data, isLoading, error }
+  return { data, isLoading }
 }
