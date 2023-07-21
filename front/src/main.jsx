@@ -18,8 +18,8 @@ const Main = () => {
       <Styled.Wrapper>
         <NavBar />
         <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
+          <Route path="/login"  component={Login} />
+          <Route path="/register"  component={Register} />
           <Route path="/products" component={Products} />
           <Route path="/" guarded={true}  component={userPage} />
           <Redirect to="/login" />

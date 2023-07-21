@@ -11,6 +11,7 @@ const Nav = styled.nav`
   height: 50px;
   background-color: black;
   text-align: center;
+  padding: 0;
 
 
 `;

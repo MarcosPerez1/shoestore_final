@@ -13,7 +13,7 @@ const userPage = () => {
   const [showModal, setShowModal] = useState(false);
 
   if (showModal) return <Modal handleModal={setShowModal} />;
-  console.log(favourites)
+  
    
   return (
     <Common.Page>

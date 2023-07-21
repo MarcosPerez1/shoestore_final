@@ -22,7 +22,7 @@ const Register = () => {
         <Input
           name="email"
           label={true}
-          placeholder="email@domain.com"
+          placeholder="youremail@email.com"
           validation={{ required }}
         />
         <Input
@@ -41,7 +41,7 @@ const Register = () => {
       </Form>
 
       <Footer>
-        <Link to="/login">¿Listo para explorar de nuevo? ¡Bienvenido de vuelta a tu cuenta!</Link>
+        <Link to="/login">¿Listo para explorar de nuevo? ¡Bienvenido de nuevo a tu cuenta!</Link>
       </Footer>
     </Styled.Page>
   );
