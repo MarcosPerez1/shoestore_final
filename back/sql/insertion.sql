@@ -1,5 +1,4 @@
-INSERT INTO users (email, username, password)
-VALUES ('correo@example.com', 'usuario1', 'contraseña123');
+
 
 INSERT INTO products (brand, model, size, images, price, quantity)
 VALUES ('Nike', 'Air Max 90', '42', 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/8cc40f5a-3693-4976-9ce0-70ec9687889b/air-max-90-zapatillas-jc0R7p.png', 129.99, 1);

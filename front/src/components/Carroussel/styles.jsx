@@ -6,12 +6,13 @@ export const CarouselContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 300px;
+  
 `;
 
 export const Slide = styled.img`
 
-transition: transform 0.3s ease;
+transition: transform 0.7s ease;
 
 
 &.slide-hidden {
@@ -29,7 +30,7 @@ transition: transform 0.3s ease;
   border-radius: 0.5rem;
   box-shadow: 0px 0px 7px #666;
   margin-top:50px;
-  width: 100%;
+  width: 50%;
   height: 100%;
   // background: ${props => `url(${props.src}) no-repeat top center`};
 `;

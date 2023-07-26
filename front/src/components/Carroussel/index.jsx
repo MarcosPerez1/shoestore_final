@@ -4,7 +4,7 @@ import { useFavs } from "../../hooks/useFavs";
 
 export const Carroussel = () => {
   const { data } = useFavs();
-  const [centerSlide, setCenterSlide] = useState(0);
+  const [centerSlide, setCenterSlide] = useState(1);
 
   const nextSlide = () => {
     setCenterSlide((slide) => (slide === data.length - 1 ? 0 : slide + 1));

@@ -7,6 +7,8 @@ const errors = require('./misc/errors')
 
 const app = express()
 
+const port = process.env.PORT || 3000;
+
 app.use(cors(options))
 app.use(express.json())
 app.use(cookieParser())
@@ -27,6 +29,6 @@ app.use(({ statusCode, error }, req, res, next) => {
 })
 
 app.listen(
-    process.env.PORT,
-    () => console.info(`> listening at: ${process.env.PORT}`)
+    port,
+    () => console.info(`> listening at: ${port}`)
 )

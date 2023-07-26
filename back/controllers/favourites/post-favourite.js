@@ -7,7 +7,7 @@ module.exports = (db) => async (req, res, next) => {
     const {userId} = await userQueries.selectById(await db)(email)
     
     const dbRes = await queries.addFavourite(await db)(userId, productId)
-
+console.log(dbRes, "dbres")
     if (!dbRes.ok) return next({
         statusCode: 500,
         error: new Error("something went wrong!")

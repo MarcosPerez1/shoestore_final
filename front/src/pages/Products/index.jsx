@@ -9,8 +9,6 @@ import { FaPowerOff } from 'react-icons/fa';
 import { useMutation } from "react-query";
 import { changeFav } from "../../services";
 
-
-
 const Products = () => {
   const { data: user } = useUser();
   const { data, isLoading, error } = useProducts();
@@ -27,7 +25,11 @@ const Products = () => {
     changeFav.addFavourites,
     {
       onSuccess: (result) => {
-        console.log(result, 'resultd')
+        if (result && result.success) {
+          showAddOrNotModalMessage("Producto agregado a favoritos correctamente");
+        } else {
+          showAddOrNotModalMessage("El producto ya esta en tu lista de favoritos");
+        }
       },
     }
   );
@@ -44,18 +46,12 @@ const Products = () => {
         productId: productId,
       };
   
-      const result = await fav(params);
-      if (result.success) {
-        showAddOrNotModalMessage("Producto agregado a favoritos correctamente");
-      } else {
-        showAddOrNotModalMessage("El producto ya esta en tu lista de favoritos");
-      }
+      await fav(params);
     } catch (error) {
       console.log(error, "error");
-      showAddOrNotModalMessage("Error al agregar producto a favoritos.");
+ 
     }
   };
-  
 
   if (showModal) return <Modal handleModal={() => setShowModal(false)} />;
 
@@ -68,14 +64,9 @@ const Products = () => {
   }
 
   const dataFilter = data.filter(product => {
-
     const matchesBrandOrModel = product.brand.toLowerCase().includes(filter.toLowerCase()) || product.model.toLowerCase().includes(filter.toLowerCase());
-
-
     const price = parseFloat(product.price);
     const priceInRange = price >= minPrice && price <= maxPrice;
-
-
     const size = parseInt(product.size, 10);
     const sizeInRange = size >= minSize && size <= maxSize;
 

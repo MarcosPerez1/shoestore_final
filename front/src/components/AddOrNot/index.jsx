@@ -4,7 +4,7 @@ import {
   ModalContent,
   ModalText,
   ModalButton,
-} from "./styles"; // Asegúrate de importar correctamente los estilos
+} from "./styles";
 
 const AddOrNot = ({ message, onClose }) => {
   return (

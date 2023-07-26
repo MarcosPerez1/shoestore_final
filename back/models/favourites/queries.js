@@ -17,7 +17,7 @@ INSERT INTO favourites (user_id, product_id)
 VALUES (${user_id}, ${product_id});
 `
 
-const deleteFav = ({ user_id, shoe_id }) => sql.unsafe`
+const deleteFav = ( user_id, shoe_id ) => sql.unsafe`
 DELETE FROM favourites
 WHERE user_id = ${user_id} AND shoe_id = ${shoe_id};
 `

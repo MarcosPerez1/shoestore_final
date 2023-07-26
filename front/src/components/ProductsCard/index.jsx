@@ -14,7 +14,7 @@ const ProductsCard = ({ product, addFavourites, show = true }) => {
       <Size>Talla disponible: {product.size.toString()}</Size>
       <Price>Precio: {product.price}€</Price>
       {data.success && show && 
-      <Button onClick={() => addFavourites(product.id)}>favs</Button>}
+      <Button onClick={() => addFavourites(product.id)}>Favorito!</Button>}
     </Card>
   );
 };

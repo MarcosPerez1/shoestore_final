@@ -38,34 +38,20 @@ const FavUser = (db) => async (email) => {
 
 const addFavourite = (db) => async (user_id, product_id) => {
     try {
-      const existingFavourite = await db.query(
-        "SELECT * FROM favourites WHERE user_id = $1 AND product_id = $2",
-        [user_id, product_id]
-      );
-  
-      if (existingFavourite.rows.length > 0) {
+        const response = await db.query(newFavourite(user_id, product_id))
         return {
-          ok: false,
-          message: "El producto ya está en favoritos del usuario.",
-        };
-      }
-  
-    
-      const response = await db.query(newFavourite(user_id, product_id));
-  
-      return {
-        ok: true,
-        response: response.rows,
-      };
+            ok: true,
+            response: response.rows
+        }
     } catch (error) {
-      return {
-        ok: false,
-        message: error.message,
-      };
-    }
-  };
-  
 
+        return {
+            ok: false,
+            message: error.message
+        }
+
+    }
+}
 
 const eraseFav = (db) => async (shoeId, userId) => {
     try {
