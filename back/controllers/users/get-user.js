@@ -5,6 +5,7 @@ module.exports = () => async (req, res, next) => {
         success: true,
         data: {
             username: user.username,
+            email: user.email
         },
     })
 }

@@ -18,6 +18,7 @@ const NavBar = () => {
     return (
 
         <Styled.Nav>
+            <CustomLink href="/home">Home</CustomLink>
             <CustomLink href="/products">Products</CustomLink>
             <CustomLink href="/">User</CustomLink>
             <CustomLink href="/register">Register</CustomLink>

@@ -3,8 +3,8 @@ import { styled } from "styled-components";
 const Wrapper = styled.section`
   h1 {
     font-size: 36px;
-    margin: 100px 0 0;
     margin-bottom:30px;
+    text-align:center;
   }
 
   h2,

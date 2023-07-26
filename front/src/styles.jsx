@@ -10,7 +10,8 @@ const Page = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: ${({ vertical }) => (vertical ? vertical : "space-between")};
-  height: 100%;
+  padding: 0;
+  border: none;
 
   a {
     color: black;

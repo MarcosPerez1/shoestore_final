@@ -3,6 +3,7 @@ module.exports = {
     favXuser: require("./favouriteXid"),
     deleteFav: require("./delete-favourite"),
     newFav: require("./post-favourite"),
+    mostFavourites : require("./mostFavourites")
 
 
 }

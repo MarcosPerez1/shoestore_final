@@ -4,11 +4,14 @@ const User = styled.section`
   position: absolute;
   top: 20px;
   right: 20px;
+  z-index: 2;
 
   p {
     margin: 0;
   }
 `;
+
+
 
 const ProductGrid = styled.div`
   display: grid;

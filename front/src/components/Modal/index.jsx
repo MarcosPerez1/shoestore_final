@@ -9,11 +9,11 @@ const Modal = ({ handleModal }) => {
   return (
     <Styled.Page vertical="center">
       <Title tag="h2" position="center">
-        You are about to leave!
+        Vas a abandonar la sesión
       </Title>
-      <Title tag="h3">Are you sure?</Title>
-      <Button onClick={() => handleModal(false)}>Nop</Button>
-      <p onClick={logout}>Yeah</p>
+      <Title tag="h3">¿Estás seguro?</Title>
+      <Button onClick={() => handleModal(false)}>Denegar</Button>
+      <Button onClick={logout}>Confirmar</Button>
     </Styled.Page>
   );
 };

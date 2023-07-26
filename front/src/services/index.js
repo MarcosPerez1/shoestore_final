@@ -4,6 +4,8 @@ import { register, login, logout } from "./auth";
 import { basic } from "./user"
 import { products } from "./products";
 import { favourites } from "./favouritesClient"
+import { addFavourites, deleteFavourites } from "./changeFavorites";
+import { mostFavourites } from "./mostFavs"
 
 
 const client = axios.create({
@@ -29,9 +31,21 @@ const info = {
 const favInfo = {
   favourites: favourites(client)
 }
+
+const changeFav = {
+  addFavourites: addFavourites(client),
+  deleteFavourites: deleteFavourites(client)
+}
+
+const mostFavs = {
+  mostFavourites: mostFavourites(client)
+}
+
 export {
   auth,
   user,
   info,
-  favInfo
+  favInfo,
+  changeFav,
+  mostFavs
 }

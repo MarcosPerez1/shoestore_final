@@ -11,6 +11,7 @@ import Register from "./pages/Register";
 import Products from "./pages/Products";
 import userPage from "./pages/UserPage"
 import NavBar from "./components/Navbar";
+import Home from "./pages/Home"
 
 const Main = () => {
   return (
@@ -18,10 +19,11 @@ const Main = () => {
       <Styled.Wrapper>
         <NavBar />
         <Switch>
-          <Route path="/login"  component={Login} />
-          <Route path="/register"  component={Register} />
+          <Route path="/home" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
           <Route path="/products" component={Products} />
-          <Route path="/" guarded={true}  component={userPage} />
+          <Route path="/" guarded={true} component={userPage} />
           <Redirect to="/login" />
 
         </Switch>
